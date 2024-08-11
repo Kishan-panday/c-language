@@ -1,13 +1,17 @@
 # include<stdio.h>
 int main(){
-    int n;
-     printf("enter the no.:");
-    scanf("%d",&n);
-    float a=100;
-    for (  int i = 1; i<=n; i++){
+    // int n;
+    //  printf("enter the no.:");
+    // scanf("%d",&n);
+    // float a=100;
+    for (  int i = 1; i<=100; i++){
+       if (i%2 !=0)
+       {
+        continue;
+       }
        
-      printf("% f  ",a);
-      a = a * 0.5;
+      printf("% d  ",i);
+      // a = a * 0.5;
       
     }
     
