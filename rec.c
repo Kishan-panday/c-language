@@ -1,14 +1,18 @@
 #include<stdio.h>
-void greet( int x,int n){
-    if(x>n) return;
-    printf("%d\n",x);
-    greet(x+1,n);
+void greet( int n,int s){
+    if(n==0){
+        printf("%d",s);
+
+     return; 
+    }
+    greet(n-1,s+n);
+
     return;
 }
 int main() {
     int n;
     printf("Enter the number: ");
     scanf("%d", &n);
-greet(1,n);
+greet(n,0);
 return 0;
 }
