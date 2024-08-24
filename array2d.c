@@ -1,36 +1,45 @@
 #include<stdio.h>
 int main(){
-    int r,c;
-    printf("Enter the number of rows :");
-    scanf("%d",&r);
-    printf("Enter the number of column :");
-    scanf("%d",&c);
+    int n;
+    printf("Enter the number of rows/columns :");
+    scanf("%d",&n);
+    // printf("Enter the number of column :");
+    // scanf("%d",&c);
     printf("Enter the number of elements in array :\n");
    
-   int arr[r][c];
-    for(int i=0; i<r; i++){
+   int arr[n][n];
+    for(int i=0; i<n; i++){
 
-        for(int j=0; j<c; j++){
+        for(int j=0; j<n; j++){
             scanf("%d",&arr[i][j]);
         }
    
     }
+    //    printf("\n");
+    // for(int i=0; i<n; i++){
+    //     for(int j=0; j<n; j++){
+    //         printf("%d ",arr[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    
+    int resultant =0;
+    for(int i=0; i<n; i++){
+        for(int j=0; j<=i; j++){
+            resultant = arr[i][j]; 
+           arr[i][j] = arr[j][i];
+            arr[j][i] = resultant ;
+        }
+        printf("\n");
+    }
        printf("\n");
-    for(int i=0; i<r; i++){
-        for(int j=0; j<c; j++){
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
             printf("%d ",arr[i][j]);
         }
         printf("\n");
     }
-    
-    int sum =0;
-    for(int i=0; i<r; i++){
-        for(int j=0; j<c; j++){
-            sum +=arr[i][j];
-        }
-        printf("\n");
-    }
-    printf("the sum of the array is %d",sum);
+    //  printf("the array is %d",resultant);
     
     return 0;
 }
