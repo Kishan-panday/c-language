@@ -1,0 +1,1 @@
+-ping -n 4 -l 100 www.github.com
