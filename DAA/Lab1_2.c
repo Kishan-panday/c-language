@@ -18,7 +18,7 @@ for (int  i = 1; i < n; i++)
 
 for (int  i = 0; i < n; i++)
 {
-    printf("Ans:%d\n",prefixSum[i]);
+    printf("%d  ",prefixSum[i]);
 }
 return 0;
 }
